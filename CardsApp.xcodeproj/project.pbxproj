@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		4C8E43532837F8E7004CF6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */; };
 		4C8E43552837F8E7004CF6D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */; };
-		4C8E43572837F8E7004CF6D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43562837F8E7004CF6D8 /* ViewController.swift */; };
+		4C8E43572837F8E7004CF6D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */; };
 		4C8E435A2837F8E7004CF6D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E43582837F8E7004CF6D8 /* Main.storyboard */; };
 		4C8E435C2837F8E8004CF6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */; };
 		4C8E435F2837F8E8004CF6D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E435D2837F8E8004CF6D8 /* LaunchScreen.storyboard */; };
+		4C8E436F2837FFDC004CF6D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E436E2837FFDC004CF6D8 /* User.swift */; };
+		4C8E43712838004E004CF6D8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43702838004E004CF6D8 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C8E434F2837F8E7004CF6D8 /* CardsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C8E43562837F8E7004CF6D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C8E43592837F8E7004CF6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C8E435E2837F8E8004CF6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C8E43602837F8E8004CF6D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C8E436E2837FFDC004CF6D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4C8E43702838004E004CF6D8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		4C8E43512837F8E7004CF6D8 /* CardsApp */ = {
 			isa = PBXGroup;
 			children = (
-				4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */,
-				4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */,
-				4C8E43562837F8E7004CF6D8 /* ViewController.swift */,
-				4C8E43582837F8E7004CF6D8 /* Main.storyboard */,
-				4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */,
-				4C8E435D2837F8E8004CF6D8 /* LaunchScreen.storyboard */,
-				4C8E43602837F8E8004CF6D8 /* Info.plist */,
+				4C8E43672837F94E004CF6D8 /* ViewControllers */,
+				4C8E43682837F95C004CF6D8 /* Storyboards */,
+				4C8E436A2837F982004CF6D8 /* Models */,
+				4C8E436B2837F98B004CF6D8 /* Services */,
+				4C8E43692837F978004CF6D8 /* Resources */,
+				4C8E43662837F938004CF6D8 /* App */,
 			);
 			path = CardsApp;
+			sourceTree = "<group>";
+		};
+		4C8E43662837F938004CF6D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */,
+				4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */,
+				4C8E43602837F8E8004CF6D8 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4C8E43672837F94E004CF6D8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C8E43682837F95C004CF6D8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E43582837F8E7004CF6D8 /* Main.storyboard */,
+				4C8E435D2837F8E8004CF6D8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4C8E43692837F978004CF6D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C8E436A2837F982004CF6D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E436E2837FFDC004CF6D8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C8E436B2837F98B004CF6D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C8E43702838004E004CF6D8 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8E43572837F8E7004CF6D8 /* ViewController.swift in Sources */,
+				4C8E43712838004E004CF6D8 /* DataManager.swift in Sources */,
+				4C8E43572837F8E7004CF6D8 /* LoginViewController.swift in Sources */,
 				4C8E43532837F8E7004CF6D8 /* AppDelegate.swift in Sources */,
+				4C8E436F2837FFDC004CF6D8 /* User.swift in Sources */,
 				4C8E43552837F8E7004CF6D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87898T57Q4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CardsApp/Info.plist;
+				INFOPLIST_FILE = CardsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87898T57Q4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CardsApp/Info.plist;
+				INFOPLIST_FILE = CardsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
