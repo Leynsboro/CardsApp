@@ -16,6 +16,8 @@
 		4C8E43712838004E004CF6D8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43702838004E004CF6D8 /* DataManager.swift */; };
 		4C8E4373283A7348004CF6D8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E4372283A7348004CF6D8 /* Card.swift */; };
 		4C8E4375283A783E004CF6D8 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E4374283A783E004CF6D8 /* Book.swift */; };
+		4C8E4377283ADBD1004CF6D8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E4376283ADBD1004CF6D8 /* TestViewController.swift */; };
+		4C8E4379283AE8B0004CF6D8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E4378283AE8B0004CF6D8 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4C8E43702838004E004CF6D8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4C8E4372283A7348004CF6D8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4C8E4374283A783E004CF6D8 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		4C8E4376283ADBD1004CF6D8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4C8E4378283AE8B0004CF6D8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */,
+				4C8E4376283ADBD1004CF6D8 /* TestViewController.swift */,
+				4C8E4378283AE8B0004CF6D8 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8E4377283ADBD1004CF6D8 /* TestViewController.swift in Sources */,
 				4C8E43712838004E004CF6D8 /* DataManager.swift in Sources */,
 				4C8E43572837F8E7004CF6D8 /* LoginViewController.swift in Sources */,
+				4C8E4379283AE8B0004CF6D8 /* ResultViewController.swift in Sources */,
 				4C8E4375283A783E004CF6D8 /* Book.swift in Sources */,
 				4C8E4373283A7348004CF6D8 /* Card.swift in Sources */,
 				4C8E43532837F8E7004CF6D8 /* AppDelegate.swift in Sources */,
