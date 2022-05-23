@@ -29,7 +29,6 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
         
         getWord = words
         
@@ -41,7 +40,6 @@ class TestViewController: UIViewController {
         
         if wordValue == timingWord {
             knowWords += 1
-            print(knowWords)
         }
         
         nextQuestion()
@@ -60,7 +58,7 @@ class TestViewController: UIViewController {
 extension TestViewController {
     
     private func updateUI() {
-        if words.count < 6 {
+        if countOfQuestions < 6 {
             textOfTest.text = "Тест временно не готов. Попробуйте изучить больше слов"
             stackViewButtons.isHidden = true
             return
@@ -81,6 +79,21 @@ extension TestViewController {
         
     }
     
+    private func setTextForButtons(_ word: String) {
+        let randomIndex = Int.random(in: 0...3)
+        
+        for (index, button) in zip(0...3, answerButtons) {
+            if index == randomIndex {
+                button.setTitle(word, for: .normal)
+            } else {
+                guard let randomWord = getWord.randomElement() else { return }
+                button.setTitle(randomWord.value, for: .normal)
+                getWord.removeValue(forKey: randomWord.key)
+            }
+        }
+    }
+    
+    
     private func nextQuestion() {
         progress += 1
         
@@ -96,20 +109,5 @@ extension TestViewController {
         knowWords = 0
         progressView.setProgress(0, animated: true)
     }
-    
-    private func setTextForButtons(_ word: String) {
-        let randomIndex = Int.random(in: 0...3)
-        
-        for (index, button) in zip(0...3, answerButtons) {
-            if index == randomIndex {
-                button.setTitle(word, for: .normal)
-            } else {
-                guard let randomWord = getWord.randomElement() else { return }
-                button.setTitle(randomWord.value, for: .normal)
-                getWord.removeValue(forKey: randomWord.key)
-            }
-        }
-    }
-    
     
 }

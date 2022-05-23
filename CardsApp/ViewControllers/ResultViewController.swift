@@ -16,6 +16,7 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
 
         resultLabel.text = "Вы ответили на \(knowWords) из \(wordsCount)"
     }
