@@ -29,6 +29,8 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        
         getWord = words
         
         updateUI()
@@ -44,7 +46,6 @@ class TestViewController: UIViewController {
         
         nextQuestion()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
@@ -64,7 +65,9 @@ extension TestViewController {
             stackViewButtons.isHidden = true
             return
         }
-        guard let word = getWord.randomElement() else { return }
+        let index = getWord.index(getWord.startIndex, offsetBy: progress)
+        let word = getWord[index]
+        
         getWord.removeValue(forKey: word.key)
         timingWord = word.value
         
