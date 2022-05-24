@@ -65,7 +65,6 @@
                         <constraints>
                             <constraint firstItem="FgT-1X-AAe" firstAttribute="leading" secondItem="rU9-gT-7qb" secondAttribute="leading" constant="20" id="EJH-PN-81P"/>
                             <constraint firstItem="Y1G-Lw-rZp" firstAttribute="leading" secondItem="rU9-gT-7qb" secondAttribute="leading" constant="20" id="G7a-08-ctx"/>
-                            <constraint firstItem="Y1G-Lw-rZp" firstAttribute="width" secondItem="l3m-QV-lwa" secondAttribute="width" multiplier="0.875" id="M32-K3-o0v"/>
                             <constraint firstItem="rU9-gT-7qb" firstAttribute="trailing" secondItem="Y1G-Lw-rZp" secondAttribute="trailing" constant="20" id="N2b-pz-fgQ"/>
                             <constraint firstItem="Y1G-Lw-rZp" firstAttribute="top" secondItem="rU9-gT-7qb" secondAttribute="top" constant="50" id="dDy-Ia-smd"/>
                             <constraint firstItem="rU9-gT-7qb" firstAttribute="bottom" secondItem="FgT-1X-AAe" secondAttribute="bottom" constant="100" id="sEO-hy-izy"/>
@@ -570,8 +569,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Tn-6g-Ibb">
-                                                    <rect key="frame" x="20" y="8.5" width="280" height="63.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Tn-6g-Ibb">
+                                                    <rect key="frame" x="20" y="7" width="280" height="66"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите название книги" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l86-kj-MJO">
                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="25.5"/>
@@ -580,7 +579,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-t2-sv6">
-                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="23"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="25.5"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -652,8 +651,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-oh-9xL">
-                                                    <rect key="frame" x="20" y="8.5" width="280" height="63.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-oh-9xL">
+                                                    <rect key="frame" x="20" y="7" width="280" height="66"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-yO-D2U">
                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="25.5"/>
@@ -662,7 +661,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Описание" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-X6-3iS">
-                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="23"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="25.5"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
