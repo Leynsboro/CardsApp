@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Djf-hY-U1g">
-                                <rect key="frame" x="40" y="59.5" width="240" height="429"/>
+                                <rect key="frame" x="40" y="49.5" width="240" height="449"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8L4-Ti-p2Q">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -239,10 +239,10 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erJ-YX-X5U">
-                                        <rect key="frame" x="0.0" y="159" width="240" height="40"/>
+                                        <rect key="frame" x="0.0" y="159" width="240" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="yxb-1M-uj3"/>
+                                            <constraint firstAttribute="height" constant="50" id="CLY-mD-dJn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <color key="tintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -250,7 +250,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x81-9y-t5v">
-                                        <rect key="frame" x="0.0" y="230" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="240" width="240" height="128"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chx-ch-uuC">
                                                 <rect key="frame" x="93" y="51.5" width="54" height="25.5"/>
@@ -268,13 +268,13 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oz8-RG-fLK">
-                                        <rect key="frame" x="0.0" y="389" width="240" height="40"/>
+                                        <rect key="frame" x="0.0" y="399" width="240" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxk-kq-InZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
                                                 <color key="backgroundColor" red="0.92941176469999998" green="0.48627450979999998" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Zx5-c5-uSM"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Zx5-c5-uSM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                 <color key="tintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -284,10 +284,10 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-hM-huc">
-                                                <rect key="frame" x="125" y="0.0" width="115" height="40"/>
+                                                <rect key="frame" x="125" y="0.0" width="115" height="50"/>
                                                 <color key="backgroundColor" red="0.72156862749999995" green="0.81176470590000005" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="nfe-j0-7kG"/>
+                                                    <constraint firstAttribute="height" constant="50" id="nfe-j0-7kG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                 <color key="tintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -396,13 +396,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-gg-koy">
-                                <rect key="frame" x="20" y="199" width="280" height="220"/>
+                                <rect key="frame" x="20" y="209" width="280" height="260"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-zf-L7o">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="xdX-mK-F26"/>
+                                            <constraint firstAttribute="height" constant="50" id="xdX-mK-F26"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,10 +412,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCu-rc-zCb">
-                                        <rect key="frame" x="0.0" y="60" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="qZf-Ch-kbN"/>
+                                            <constraint firstAttribute="height" constant="50" id="qZf-Ch-kbN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,10 +425,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-6r-c4Z">
-                                        <rect key="frame" x="0.0" y="120" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="140" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="8x6-Ju-Sau"/>
+                                            <constraint firstAttribute="height" constant="50" id="8x6-Ju-Sau"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -438,10 +438,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyr-iG-cty">
-                                        <rect key="frame" x="0.0" y="180" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="210" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="LSc-9n-DUm"/>
+                                            <constraint firstAttribute="height" constant="50" id="LSc-9n-DUm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -462,7 +462,7 @@
                             <constraint firstItem="nx1-h3-MqV" firstAttribute="top" secondItem="fKf-f8-C7r" secondAttribute="top" id="abe-BZ-S9Z"/>
                             <constraint firstItem="t66-7p-HfA" firstAttribute="top" secondItem="nx1-h3-MqV" secondAttribute="bottom" constant="50" id="mBF-SF-x9n"/>
                             <constraint firstItem="nx1-h3-MqV" firstAttribute="leading" secondItem="fKf-f8-C7r" secondAttribute="leading" id="mRF-FT-CWI"/>
-                            <constraint firstItem="fKf-f8-C7r" firstAttribute="bottom" secondItem="eyv-gg-koy" secondAttribute="bottom" constant="100" id="ofn-vW-EV2"/>
+                            <constraint firstItem="fKf-f8-C7r" firstAttribute="bottom" secondItem="eyv-gg-koy" secondAttribute="bottom" constant="50" id="ofn-vW-EV2"/>
                             <constraint firstItem="t66-7p-HfA" firstAttribute="centerX" secondItem="w04-JU-XKD" secondAttribute="centerX" id="vlj-dg-3Ip"/>
                         </constraints>
                     </view>
@@ -611,17 +611,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j87-kw-5GO">
-                                                    <rect key="frame" x="20" y="8.5" width="280" height="63.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j87-kw-5GO">
+                                                    <rect key="frame" x="20" y="7" width="280" height="66"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Введите автора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f07-ts-Ts9">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите автора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f07-ts-Ts9">
                                                             <rect key="frame" x="0.0" y="0.0" width="280" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                             <color key="textColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Автор" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-EK-qMs">
-                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="23"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Автор" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-EK-qMs">
+                                                            <rect key="frame" x="0.0" y="40.5" width="280" height="25.5"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -736,13 +736,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6r1-Mn-Scc">
-                                <rect key="frame" x="20" y="379" width="280" height="90"/>
+                                <rect key="frame" x="20" y="359" width="280" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-p9-qk7">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.92941176889999999" green="0.48627454040000001" blue="0.40784314269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ll0-nK-Pba"/>
+                                            <constraint firstAttribute="height" constant="50" id="ll0-nK-Pba"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -751,10 +751,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-cg-w1j">
-                                        <rect key="frame" x="0.0" y="50" width="280" height="40"/>
+                                        <rect key="frame" x="0.0" y="60" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.69803921570000005" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QIa-ZA-0ox"/>
+                                            <constraint firstAttribute="height" constant="50" id="QIa-ZA-0ox"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
