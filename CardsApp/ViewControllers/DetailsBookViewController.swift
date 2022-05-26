@@ -18,24 +18,17 @@ class DetailsBookViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingBackItemColor()
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [
             .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
             .foregroundColor: Color.blue
         ]
+        
+        bookImage.layer.cornerRadius = Radius.radiusLargeImage
 
         bookImage.image = book.image
         nameBookLable.text = book.name
         descriptionBookLable.text = book.description
     }
-    
-    private func settingBackItemColor() {
-        let backButton = UIBarButtonItem()
-        backButton.title = "Назад"
-        backButton.tintColor = Color.red
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-    }
-
 }

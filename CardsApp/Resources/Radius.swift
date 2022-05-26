@@ -9,5 +9,6 @@ import UIKit
 
 struct Radius {
     static let radiusButton: CGFloat = 25
-    static let radiusImage: CGFloat = 20
+    static let radiusSmallImage: CGFloat = 5
+    static let radiusLargeImage: CGFloat = 30
 }

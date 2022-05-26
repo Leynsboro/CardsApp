@@ -43,7 +43,7 @@ class NewBookTableViewController: UITableViewController {
         let name = newNameTextField.text ?? ""
         let author = newAuthorTextField.text ?? ""
         let description = newDescriptionTextField.text ?? ""
-        let image = imageChange ? newBookImage.image : UIImage(named: "image")
+        let image = imageChange ? newBookImage.image : UIImage(named: "book")
         
         book = Book(name: name, author: author, description: description, image: image, isFavorite: book.isFavorite)
     }

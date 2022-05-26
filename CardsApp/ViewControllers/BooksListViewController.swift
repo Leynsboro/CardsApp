@@ -76,6 +76,7 @@ extension BooksListViewController {
         content.secondaryTextProperties.color = Color.gray
         
         content.image = book.image
+        content.imageProperties.cornerRadius = Radius.radiusSmallImage
         
         cell.contentConfiguration = content
         
