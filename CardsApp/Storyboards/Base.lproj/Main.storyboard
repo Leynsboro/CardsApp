@@ -593,7 +593,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingChanged" id="kZc-np-52m"/>
+                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingChanged" id="Gcr-Qk-38s"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -634,7 +634,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingDidEnd" id="knE-yX-A41"/>
+                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingChanged" id="fPe-sK-9Ic"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -675,7 +675,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingDidEnd" id="NWD-8e-zuW"/>
+                                                                <action selector="checkText:" destination="UTF-z8-pug" eventType="editingChanged" id="aGD-wb-abl"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
