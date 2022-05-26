@@ -17,9 +17,12 @@ class BooksListViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 80
         
+        navigationController?.navigationBar.barTintColor = Color.darkBlue
+        tabBarController?.tabBar.barTintColor = Color.darkBlue
+        
         navigationItem.leftBarButtonItem = self.editButtonItem
         navigationItem.leftBarButtonItem?.image = UIImage(systemName: "wrench.and.screwdriver.fill")
-        navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 177/255, green: 96/255, blue: 94/255, alpha: 1)
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 237/255, green: 124/255, blue: 104/255, alpha: 1)
     }
     
     @IBAction func unwindsegue(segue: UIStoryboardSegue) {
@@ -62,9 +65,13 @@ extension BooksListViewController {
         let book = booksList[indexPath.row]
         
         content.text = book.name
-        content.textProperties.color = UIColor.white
+        content.textProperties.font = UIFont(name: Font.fontName, size: Font.sizeForTextInTableView) ?? UIFont()
+        content.textProperties.color = Color.lightGray
+        
         content.secondaryText = book.author
-        content.secondaryTextProperties.color = UIColor.systemGray
+        content.secondaryTextProperties.font = UIFont(name: Font.fontName, size: Font.sizeForSecondaryTextInTableView) ?? UIFont()
+        content.secondaryTextProperties.color = Color.gray
+        
         content.image = book.image
         
         cell.contentConfiguration = content
@@ -110,7 +117,7 @@ extension BooksListViewController {
             completion(true)
         }
         
-        action.backgroundColor = book.isFavorite ? .systemIndigo : .systemGray
+        action.backgroundColor = book.isFavorite ? UIColor(red: 184/255, green: 207/255, blue: 158/255, alpha: 1) : .systemGray
         action.image = book.isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
         
         return action

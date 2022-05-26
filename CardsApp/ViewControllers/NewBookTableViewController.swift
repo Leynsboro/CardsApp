@@ -22,6 +22,8 @@ class NewBookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = Color.darkBlue
+        
         setSaveButtonState()
     }
     

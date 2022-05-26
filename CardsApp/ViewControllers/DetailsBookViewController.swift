@@ -19,6 +19,8 @@ class DetailsBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingBackItemColor()
+
+        tabBarController?.tabBar.backgroundColor = Color.darkBlue
         
         bookImage.image = book.image
         nameBookLable.text = book.name
@@ -28,7 +30,7 @@ class DetailsBookViewController: UIViewController {
     private func settingBackItemColor() {
         let backButton = UIBarButtonItem()
         backButton.title = "Назад"
-        backButton.tintColor = UIColor(red: 177/255, green: 96/255, blue: 94/255, alpha: 1)
+        backButton.tintColor = Color.red
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 
