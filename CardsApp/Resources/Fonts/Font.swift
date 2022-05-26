@@ -11,4 +11,5 @@ struct Font {
     static let fontName = "Comfortaa"
     static let sizeForTextInTableView: CGFloat = 17
     static let sizeForSecondaryTextInTableView: CGFloat = 14
+    static let sizeForLargeTitle: CGFloat = 30
 }

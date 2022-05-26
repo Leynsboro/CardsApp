@@ -23,6 +23,11 @@ class NewBookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = Color.darkBlue
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
+            .foregroundColor: Color.blue
+        ]
         
         setSaveButtonState()
     }
