@@ -393,7 +393,7 @@
                                 <color key="progressTintColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t66-7p-HfA">
-                                <rect key="frame" x="176.33333333333334" y="162" width="61.333333333333343" height="29.333333333333343"/>
+                                <rect key="frame" x="173.33333333333334" y="162" width="67.666666666666657" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="25"/>
                                 <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -574,16 +574,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Tn-6g-Ibb">
-                                                    <rect key="frame" x="20" y="9.3333333333333321" width="374" height="61.666666666666671"/>
+                                                    <rect key="frame" x="20" y="7.3333333333333357" width="374" height="65.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите название книги" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l86-kj-MJO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="25.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                             <color key="textColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-t2-sv6">
-                                                            <rect key="frame" x="0.0" y="38.333333333333329" width="374" height="23.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333329" width="374" height="25.333333333333329"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -615,16 +615,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j87-kw-5GO">
-                                                    <rect key="frame" x="20" y="9.3333333333333321" width="374" height="61.666666666666671"/>
+                                                    <rect key="frame" x="20" y="7.3333333333333357" width="374" height="65.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите автора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f07-ts-Ts9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="25.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                             <color key="textColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Автор" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-EK-qMs">
-                                                            <rect key="frame" x="0.0" y="38.333333333333329" width="374" height="23.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333329" width="374" height="25.333333333333329"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -656,16 +656,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-oh-9xL">
-                                                    <rect key="frame" x="20" y="9.3333333333333321" width="374" height="61.666666666666671"/>
+                                                    <rect key="frame" x="20" y="7.3333333333333357" width="374" height="65.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-yO-D2U">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="25.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="20"/>
                                                             <color key="textColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Описание" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-X6-3iS">
-                                                            <rect key="frame" x="0.0" y="38.333333333333329" width="374" height="23.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333329" width="374" height="25.333333333333329"/>
                                                             <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -733,7 +733,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы молодец!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dix-E1-SZI">
-                                <rect key="frame" x="116.66666666666667" y="340.66666666666669" width="180.66666666666663" height="35"/>
+                                <rect key="frame" x="119.33333333333333" y="339.33333333333331" width="175.66666666666669" height="37.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="30"/>
                                 <color key="textColor" red="0.72156864399999998" green="0.81176471709999998" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>

@@ -29,6 +29,10 @@ class NewBookTableViewController: UITableViewController {
             .foregroundColor: Color.blue
         ]
         
+        newNameTextField.delegate = self
+        newAuthorTextField.delegate = self
+        newDescriptionTextField.delegate = self
+        
         setSaveButtonState()
     }
     
@@ -114,4 +118,14 @@ extension NewBookTableViewController: UIImagePickerControllerDelegate, UINavigat
     }
 }
 
-
+extension NewBookTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == newNameTextField {
+            newAuthorTextField.becomeFirstResponder()
+        } else if textField == newAuthorTextField {
+            newDescriptionTextField.becomeFirstResponder()
+        }
+        
+        return true
+    }
+}
