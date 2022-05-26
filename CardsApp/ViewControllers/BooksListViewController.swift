@@ -9,8 +9,6 @@ import UIKit
 
 class BooksListViewController: UITableViewController {
     
-    @IBOutlet var listBooks: UITableView!
-    
     var booksList = Book.getBooks()
 
     override func viewDidLoad() {
@@ -46,9 +44,9 @@ class BooksListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let book = booksList[indexPath.row]
         
-        guard let navVc = segue.destination as? UINavigationController else { return }
+        guard let navVC = segue.destination as? UINavigationController else { return }
         
-        if let detailsVC = navVc.topViewController as? DetailsBookViewController {
+        if let detailsVC = navVC.topViewController as? DetailsBookViewController {
             detailsVC.book = book
         }
     }
