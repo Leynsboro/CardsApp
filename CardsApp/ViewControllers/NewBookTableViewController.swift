@@ -44,7 +44,7 @@ class NewBookTableViewController: UITableViewController {
         setSaveButtonState()
     }
     
-    // MARK: - Navigation
+// MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "save" else { return }
         
@@ -65,6 +65,7 @@ class NewBookTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Private funcs
 extension NewBookTableViewController {
     private func setSaveButtonState() {
         
@@ -101,6 +102,7 @@ extension NewBookTableViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 extension NewBookTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     private func choseImagePicker(source: UIImagePickerController.SourceType) {
         if UIImagePickerController.isSourceTypeAvailable(source) {
@@ -122,6 +124,7 @@ extension NewBookTableViewController: UIImagePickerControllerDelegate, UINavigat
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension NewBookTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == newNameTextField {

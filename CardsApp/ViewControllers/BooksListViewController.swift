@@ -41,7 +41,7 @@ class BooksListViewController: UITableViewController {
         }
     }
     
-    // MARK: - Navigation
+// MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let book = booksList[indexPath.row]
@@ -54,7 +54,7 @@ class BooksListViewController: UITableViewController {
     }
 }
 
-    // MARK: - Table view DataSource and Delegate
+// MARK: - Table view DataSource and Delegate
 extension BooksListViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +112,7 @@ extension BooksListViewController {
     }
 }
 
+// MARK: - Private funcs
 extension BooksListViewController {
     private func createFavouriteAction(at indexPath: IndexPath) -> UIContextualAction {
         var book = booksList[indexPath.row]
