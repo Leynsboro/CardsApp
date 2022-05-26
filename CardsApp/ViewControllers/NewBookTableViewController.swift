@@ -33,6 +33,10 @@ class NewBookTableViewController: UITableViewController {
         newAuthorTextField.delegate = self
         newDescriptionTextField.delegate = self
         
+        newNameTextField.returnKeyType = .next
+        newAuthorTextField.returnKeyType = .next
+        newDescriptionTextField.returnKeyType = .done
+        
         setSaveButtonState()
     }
     
@@ -124,6 +128,8 @@ extension NewBookTableViewController: UITextFieldDelegate {
             newAuthorTextField.becomeFirstResponder()
         } else if textField == newAuthorTextField {
             newDescriptionTextField.becomeFirstResponder()
+        } else {
+            newDescriptionTextField.resignFirstResponder()
         }
         
         return true
