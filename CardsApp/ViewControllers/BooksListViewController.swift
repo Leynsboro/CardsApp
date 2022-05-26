@@ -46,8 +46,11 @@ class BooksListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let book = booksList[indexPath.row]
         
-        guard let detailsVC = segue.destination as? DetailsBookViewController else { return }
-        detailsVC.book = book
+        guard let navVc = segue.destination as? UINavigationController else { return }
+        
+        if let detailsVC = navVc.topViewController as? DetailsBookViewController {
+            detailsVC.book = book
+        }
     }
 }
 

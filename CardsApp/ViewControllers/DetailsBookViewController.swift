@@ -19,9 +19,13 @@ class DetailsBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingBackItemColor()
-
-        tabBarController?.tabBar.backgroundColor = Color.darkBlue
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
+            .foregroundColor: Color.blue
+        ]
+
         bookImage.image = book.image
         nameBookLable.text = book.name
         descriptionBookLable.text = book.description
