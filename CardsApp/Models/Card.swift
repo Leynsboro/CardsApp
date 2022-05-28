@@ -27,7 +27,8 @@ struct Card {
                 Card(
                     originalWord: key,
                     translatedWord: value,
-                    originalImage: key)
+                    originalImage: key
+                )
             )
         }
         

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48CB46212840E56E00F6012C /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB46202840E56E00F6012C /* CardsTableViewController.swift */; };
+		48CB46232840E59800F6012C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB46222840E59800F6012C /* CardViewController.swift */; };
 		4C8E43532837F8E7004CF6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */; };
 		4C8E43552837F8E7004CF6D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */; };
-		4C8E43572837F8E7004CF6D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */; };
+		4C8E43572837F8E7004CF6D8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E43562837F8E7004CF6D8 /* WelcomeViewController.swift */; };
 		4C8E435A2837F8E7004CF6D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E43582837F8E7004CF6D8 /* Main.storyboard */; };
 		4C8E435C2837F8E8004CF6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */; };
 		4C8E435F2837F8E8004CF6D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E435D2837F8E8004CF6D8 /* LaunchScreen.storyboard */; };
@@ -19,10 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48CB46202840E56E00F6012C /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		48CB46222840E59800F6012C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		4C8E434F2837F8E7004CF6D8 /* CardsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8E43522837F8E7004CF6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8E43542837F8E7004CF6D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4C8E43562837F8E7004CF6D8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4C8E43592837F8E7004CF6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C8E435B2837F8E8004CF6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C8E435E2837F8E8004CF6D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 		4C8E43672837F94E004CF6D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C8E43562837F8E7004CF6D8 /* LoginViewController.swift */,
+				4C8E43562837F8E7004CF6D8 /* WelcomeViewController.swift */,
+				48CB46202840E56E00F6012C /* CardsTableViewController.swift */,
+				48CB46222840E59800F6012C /* CardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,9 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8E43712838004E004CF6D8 /* DataManager.swift in Sources */,
-				4C8E43572837F8E7004CF6D8 /* LoginViewController.swift in Sources */,
+				4C8E43572837F8E7004CF6D8 /* WelcomeViewController.swift in Sources */,
 				4C8E4375283A783E004CF6D8 /* Book.swift in Sources */,
 				4C8E4373283A7348004CF6D8 /* Card.swift in Sources */,
+				48CB46232840E59800F6012C /* CardViewController.swift in Sources */,
+				48CB46212840E56E00F6012C /* CardsTableViewController.swift in Sources */,
 				4C8E43532837F8E7004CF6D8 /* AppDelegate.swift in Sources */,
 				4C8E43552837F8E7004CF6D8 /* SceneDelegate.swift in Sources */,
 			);
