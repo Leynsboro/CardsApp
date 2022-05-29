@@ -20,7 +20,7 @@ class BooksListViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = self.editButtonItem
         navigationItem.leftBarButtonItem?.image = UIImage(systemName: "wrench.and.screwdriver.fill")
-        navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 237/255, green: 124/255, blue: 104/255, alpha: 1)
+        navigationItem.leftBarButtonItem?.tintColor = Color.red
     }
     
     @IBAction func unwindsegue(segue: UIStoryboardSegue) {
