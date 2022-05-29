@@ -51,6 +51,7 @@ class CardViewController: UIViewController {
         imageView.image = UIImage(named: cards.originalImage)
         
         russianWordLabel.isHidden = true
+        KnowCards.cards = card
     }
     
     @IBAction func noSave() {
@@ -69,4 +70,8 @@ class CardViewController: UIViewController {
         imageView.image = UIImage(named: cards.originalImage)
     }
     
+}
+
+struct KnowCards {
+    static var cards: [String:String] = [:]
 }

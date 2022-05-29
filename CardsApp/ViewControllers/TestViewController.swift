@@ -9,22 +9,17 @@ import UIKit
 
 class TestViewController: UIViewController {
     
-    //@IBOutlet var textView: UIView!
     @IBOutlet var textOfTest: UILabel!
     @IBOutlet var progressView: UIProgressView!
     
     @IBOutlet var stackViewButtons: UIStackView!
     @IBOutlet var answerButtons: [UIButton]!
     
-    let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко", "light" : "свет", "iphone" : "айфон", "coctail" : "кокйтель", "dark" : "темный"]
+    var words: [String : String] = [:]
     
     var wrongAnswers: [String: String] = [:]
     
     var workingDict: [String : String] = [:]
-    
-    var countOfQuestions: Int {
-        words.count
-    }
     
     var correctWords = 0
     var progress = 0
@@ -32,10 +27,9 @@ class TestViewController: UIViewController {
    
     var answered = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        words = KnowCards.cards
         workingDict = words
         updateUI()
     }
@@ -72,7 +66,7 @@ class TestViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
-        resultVC.wordsCount = countOfQuestions
+        resultVC.wordsCount = words.count
         resultVC.correctWords = correctWords
         resultVC.wrongAnswers = wrongAnswers
     }
@@ -84,7 +78,7 @@ class TestViewController: UIViewController {
 extension TestViewController {
     
     private func updateUI() {
-        if countOfQuestions < 6 {
+        if words.count < 6 {
             textOfTest.text = "Тест временно не готов. Попробуйте изучить больше слов"
             stackViewButtons.isHidden = true
             return
@@ -95,7 +89,7 @@ extension TestViewController {
         workingDict.removeValue(forKey: word.key)
         checkingWord = word.value
         
-        let progressive = Float(progress) / Float(countOfQuestions)
+        let progressive = Float(progress) / Float(words.count)
         progressView.setProgress(progressive, animated: true)
         
         textOfTest.text = word.key
@@ -123,7 +117,7 @@ extension TestViewController {
     private func nextQuestion() {
         progress += 1
         
-        if progress < countOfQuestions {
+        if progress < words.count {
             workingDict = words
             updateUI()
             return

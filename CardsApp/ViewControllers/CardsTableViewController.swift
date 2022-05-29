@@ -14,8 +14,8 @@ class CardsTableViewController: UITableViewController {
 //    var cards: [Card] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem
-        tableView.rowHeight = 100
+        
+        tableView.rowHeight = 80
     }
 
     // MARK: - Table view data source
@@ -27,13 +27,14 @@ class CardsTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
-        var contend = cell.defaultContentConfiguration()
+        var content = cell.defaultContentConfiguration()
         let card = cards[indexPath.row]
 
-        contend.text = card.originalWord
-        contend.image = UIImage(named: card.originalImage)
-//        contend.imageProperties.cornerRadius = tableView.rowHeight / 2
-        cell.contentConfiguration = contend
+        content.text = card.originalWord
+        content.textProperties.font = UIFont(name: Font.fontName, size: Font.sizeForTextInTableView) ?? UIFont()
+        content.textProperties.color = Color.lightGray
+        
+        cell.contentConfiguration = content
         return cell
     }
    
