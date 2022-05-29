@@ -14,8 +14,8 @@ class CardsTableViewController: UITableViewController {
 //    var cards: [Card] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        navigationItem.leftBarButtonItem = editButtonItem
+        tableView.rowHeight = 100
     }
 
     // MARK: - Table view data source
@@ -31,6 +31,8 @@ class CardsTableViewController: UITableViewController {
         let card = cards[indexPath.row]
 
         contend.text = card.originalWord
+        contend.image = UIImage(named: card.originalImage)
+//        contend.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = contend
         return cell
     }
@@ -39,6 +41,14 @@ class CardsTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             guard let cardVC = segue.destination as? CardViewController else { return }
             cardVC.cards = cards[indexPath.row]
+            cardVC.delegate = self
         }
+    }
+}
+
+extension CardsTableViewController: CardViewControllerDelegate {
+    func getNextCard(_ current: Card) -> Card {
+        let cardsWithoutCurrent = cards.filter {$0.uuid != current.uuid}
+        return cardsWithoutCurrent[Int.random(in: 0..<cardsWithoutCurrent.count)]
     }
 }

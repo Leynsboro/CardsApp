@@ -7,8 +7,14 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+protocol CardViewControllerDelegate: AnyObject {
+    func getNextCard(_ current: Card) -> Card
+}
 
+class CardViewController: UIViewController {
+    
+    weak var delegate: CardViewControllerDelegate?
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var englishWordLabel: UILabel!
     @IBOutlet var russianwordLabel: UILabel!
@@ -20,8 +26,7 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         russianwordLabel.isHidden = true
-        englishWordLabel.text = cards.originalWord
-        imageView.image = UIImage(named: cards.originalImage)
+        setupUI(with: cards)
         }
     
 
@@ -32,13 +37,30 @@ class CardViewController: UIViewController {
     }
     
     @IBAction func save() {
-       
         card.updateValue(cards.originalWord, forKey: cards.translatedWord)
+        
+        englishWordLabel.text = cards.originalImage
+        russianwordLabel.text = cards.translatedWord
+        imageView.image = UIImage(named: cards.originalImage)
+        cards = delegate?.getNextCard(cards)
+        russianwordLabel.isHidden = true
         
     }
     
     @IBAction func noSave() {
         
+        card.updateValue(cards.originalWord, forKey: cards.translatedWord)
+        englishWordLabel.text = cards.originalImage
+        russianwordLabel.text = cards.translatedWord
+        imageView.image = UIImage(named: cards.originalImage)
+        cards = delegate?.getNextCard(cards)
+        
+    }
+    
+    private func setupUI(with card: Card) {
+        englishWordLabel.text = cards.originalWord
+        russianwordLabel.text = cards.translatedWord
+        imageView.image = UIImage(named: cards.originalImage)
     }
     
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 struct Card {
+    let uuid: UUID
     let originalWord: String
     let translatedWord: String
     let originalImage: String
@@ -25,6 +26,7 @@ struct Card {
         for (key, value) in words {
             listOfCards.append(
                 Card(
+                    uuid: UUID(),
                     originalWord: key,
                     translatedWord: value,
                     originalImage: key
