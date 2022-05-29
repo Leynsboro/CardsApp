@@ -9,9 +9,8 @@ import UIKit
 
 class CardsTableViewController: UITableViewController {
 
+    var cardsList: [Card] = []
     
-   var cards = Card.getCards()
-//    var cards: [Card] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +23,14 @@ class CardsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return cards.count
+       return cardsList.count
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let card = cards[indexPath.row]
+        let card = cardsList[indexPath.row]
 
         content.text = card.originalWord
         content.textProperties.font = UIFont(name: Font.fontName, size: Font.sizeForTextInTableView) ?? UIFont()
@@ -49,7 +48,7 @@ class CardsTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
         if let cardVC = navVC.topViewController as? CardViewController {
-            cardVC.cards = cards[indexPath.row]
+            cardVC.cards = cardsList[indexPath.row]
             cardVC.delegate = self
         }
     }
@@ -57,7 +56,7 @@ class CardsTableViewController: UITableViewController {
 
 extension CardsTableViewController: CardViewControllerDelegate {
     func getNextCard(_ current: Card) -> Card {
-        let cardsWithoutCurrent = cards.filter {$0.uuid != current.uuid}
+        let cardsWithoutCurrent = cardsList.filter {$0.uuid != current.uuid}
         return cardsWithoutCurrent[Int.random(in: 0..<cardsWithoutCurrent.count)]
     }
 }

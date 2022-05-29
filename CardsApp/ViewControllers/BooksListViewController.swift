@@ -9,7 +9,7 @@ import UIKit
 
 class BooksListViewController: UITableViewController {
     
-    var booksList = Book.getBooks()
+    var booksList: [Book] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
