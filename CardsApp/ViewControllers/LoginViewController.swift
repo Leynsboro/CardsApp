@@ -8,12 +8,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet var startButton: UIButton!
+    @IBOutlet var developersButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        startButton.layer.cornerRadius = Radius.radiusButton
+        developersButton.layer.cornerRadius = Radius.radiusButton
+        
     }
-
-
 }
 
