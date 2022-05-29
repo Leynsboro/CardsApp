@@ -48,12 +48,11 @@ class TestViewController: UIViewController {
                     if button.title(for: .normal) == checkingWord {
                         button.backgroundColor = Color.green
                         wrongAnswers[textOfTest.text ?? ""] = checkingWord
-                        print(wrongAnswers)
                     }
                 }
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.nextQuestion()
                 self.answered = false
                 for button in self.answerButtons {

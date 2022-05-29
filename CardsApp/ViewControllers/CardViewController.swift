@@ -36,32 +36,23 @@ class CardViewController: UIViewController {
         setupUI(with: cards)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        KnowCards.cards = card
+    }
+    
     @IBAction func translation() {
         russianWordLabel.isHidden = false
         russianWordLabel.text = cards.translatedWord
     }
     
     @IBAction func save() {
-        card.updateValue(cards.originalWord, forKey: cards.translatedWord)
-        cards = delegate?.getNextCard(cards)
-        
-        englishWordLabel.text = cards.originalImage
-        russianWordLabel.text = cards.translatedWord
-        
-        imageView.image = UIImage(named: cards.originalImage)
-        
-        russianWordLabel.isHidden = true
-        KnowCards.cards = card
+        card.updateValue(cards.translatedWord, forKey: cards.originalWord)
+        setNewCard()
     }
     
     @IBAction func noSave() {
-        englishWordLabel.text = cards.originalImage
-        russianWordLabel.text = cards.translatedWord
-        cards = delegate?.getNextCard(cards)
-        
-        imageView.image = UIImage(named: cards.originalImage)
-        
-        russianWordLabel.isHidden = true
+        setNewCard()
     }
     
     private func setupUI(with card: Card) {
@@ -70,6 +61,16 @@ class CardViewController: UIViewController {
         imageView.image = UIImage(named: cards.originalImage)
     }
     
+    private func setNewCard() {
+        cards = delegate?.getNextCard(cards)
+        
+        englishWordLabel.text = cards.originalImage
+        russianWordLabel.text = cards.translatedWord
+        
+        imageView.image = UIImage(named: cards.originalImage)
+        
+        russianWordLabel.isHidden = true
+    }
 }
 
 struct KnowCards {
