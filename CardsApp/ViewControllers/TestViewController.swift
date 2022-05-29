@@ -81,6 +81,7 @@ extension TestViewController {
         if words.count < 6 {
             textOfTest.text = "Тест временно не готов. Попробуйте изучить больше слов"
             stackViewButtons.isHidden = true
+            progressView.isHidden = true
             return
         }
         let index = workingDict.index(workingDict.startIndex, offsetBy: progress)
@@ -93,7 +94,8 @@ extension TestViewController {
         progressView.setProgress(progressive, animated: true)
         
         textOfTest.text = word.key
-        stackViewButtons.isHidden = false
+        stackViewButtons.isHidden.toggle()
+        progressView.isHidden.toggle()
         
         setTextForButtons(word.value)
         
