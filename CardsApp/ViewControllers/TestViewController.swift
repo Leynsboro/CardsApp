@@ -9,6 +9,7 @@ import UIKit
 
 class TestViewController: UIViewController {
     
+    @IBOutlet var textView: UIView!
     @IBOutlet var textOfTest: UILabel!
     @IBOutlet var progressView: UIProgressView!
     
@@ -17,38 +18,67 @@ class TestViewController: UIViewController {
     
     let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко"]
     
-    var getWord: [String : String] = [:]
+    var wrongAnswers: [String: String] = [:]
+    
+    var workingDict: [String : String] = [:]
     
     var countOfQuestions: Int {
         words.count
     }
     
-    var knowWords = 0
-    var timingWord = ""
+    var correctWords = 0
     var progress = 0
+    var checkingWord = ""
+   
+    var answered = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getWord = words
+        for button in answerButtons {
+            button.layer.cornerRadius = 10
+        }
+        textView.layer.cornerRadius = 10
         
+        workingDict = words
         updateUI()
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        let wordValue = sender.title(for: .normal)
-        
-        if wordValue == timingWord {
-            knowWords += 1
+        if !answered {
+            answered = true
+            let wordFromButton = sender.title(for: .normal)
+            
+            if wordFromButton == checkingWord {
+                sender.backgroundColor =  UIColor.Colors.green
+                correctWords += 1
+            } else {
+                sender.backgroundColor = UIColor.Colors.red
+                for button in answerButtons {
+                    if button.title(for: .normal) == checkingWord {
+                        button.backgroundColor = UIColor.Colors.green
+                        wrongAnswers[textOfTest.text ?? ""] = checkingWord
+                        print(wrongAnswers)
+                    }
+                }
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.nextQuestion()
+                self.answered = false
+                for button in self.answerButtons {
+                    button.backgroundColor = UIColor.Colors.blue
+                }
+            }
         }
         
-        nextQuestion()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.wordsCount = countOfQuestions
-        resultVC.knowWords = knowWords
+        resultVC.knowWords = correctWords
+        resultVC.wrongAnswers = wrongAnswers
     }
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {}
@@ -63,11 +93,11 @@ extension TestViewController {
             stackViewButtons.isHidden = true
             return
         }
-        let index = getWord.index(getWord.startIndex, offsetBy: progress)
-        let word = getWord[index]
+        let index = workingDict.index(workingDict.startIndex, offsetBy: progress)
+        let word = workingDict[index]
         
-        getWord.removeValue(forKey: word.key)
-        timingWord = word.value
+        workingDict.removeValue(forKey: word.key)
+        checkingWord = word.value
         
         let progressive = Float(progress) / Float(countOfQuestions)
         progressView.setProgress(progressive, animated: true)
@@ -86,9 +116,9 @@ extension TestViewController {
             if index == randomIndex {
                 button.setTitle(word, for: .normal)
             } else {
-                guard let randomWord = getWord.randomElement() else { return }
+                guard let randomWord = workingDict.randomElement() else { return }
                 button.setTitle(randomWord.value, for: .normal)
-                getWord.removeValue(forKey: randomWord.key)
+                workingDict.removeValue(forKey: randomWord.key)
             }
         }
     }
@@ -98,7 +128,7 @@ extension TestViewController {
         progress += 1
         
         if progress < countOfQuestions {
-            getWord = words
+            workingDict = words
             updateUI()
             return
         }
@@ -106,8 +136,23 @@ extension TestViewController {
         performSegue(withIdentifier: "showResult", sender: nil)
         
         progress = 0
-        knowWords = 0
+        correctWords = 0
         progressView.setProgress(0, animated: true)
+        wrongAnswers = [:]
     }
     
+}
+
+extension UIColor {
+    struct Colors {
+        static var green: UIColor {
+            UIColor(red: 184/255, green: 207/255, blue: 158/255, alpha: 1)
+        }
+        static var red: UIColor {
+            UIColor(red: 237/255, green: 124/255, blue: 104/255, alpha: 1)
+        }
+        static var blue: UIColor {
+            UIColor(red: 118/255, green: 178/255, blue: 248/255, alpha: 1)
+        }
+    }
 }

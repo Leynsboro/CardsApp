@@ -5,11 +5,11 @@
 //  Created by Илья Гусаров on 20.05.2022.
 //
 
-import Foundation
+import UIKit
 
 class DataManager {
     
-    static var share = DataManager()
+    static let share = DataManager()
     
     let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко"]
     
@@ -18,7 +18,6 @@ class DataManager {
         "Chapollino": "Jopa govno",
         "kniga": "ee nado chitat'"
     ]
-    
     
     init() {}
 }
