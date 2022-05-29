@@ -38,8 +38,10 @@ class CardsTableViewController: UITableViewController {
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            guard let cardVC = segue.destination as? CardViewController else { return }
+        guard let navVC = segue.destination as? UINavigationController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        if let cardVC = navVC.topViewController as? CardViewController {
             cardVC.cards = cards[indexPath.row]
             cardVC.delegate = self
         }

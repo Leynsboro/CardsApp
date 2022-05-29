@@ -25,6 +25,13 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
+            .foregroundColor: Color.blue
+        ]
+        
         russianWordLabel.isHidden = true
         setupUI(with: cards)
     }
@@ -44,9 +51,6 @@ class CardViewController: UIViewController {
         imageView.image = UIImage(named: cards.originalImage)
         
         russianWordLabel.isHidden = true
-        
-        print(cards)
-        
     }
     
     @IBAction func noSave() {

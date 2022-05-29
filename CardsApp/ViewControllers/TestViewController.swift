@@ -16,7 +16,7 @@ class TestViewController: UIViewController {
     @IBOutlet var stackViewButtons: UIStackView!
     @IBOutlet var answerButtons: [UIButton]!
     
-    let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко"]
+    let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко", "light" : "свет", "iphone" : "айфон", "coctail" : "кокйтель", "dark" : "темный"]
     
     var wrongAnswers: [String: String] = [:]
     
@@ -35,10 +35,6 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for button in answerButtons {
-            button.layer.cornerRadius = 10
-        }
-        //textView.layer.cornerRadius = 10
         
         workingDict = words
         updateUI()
@@ -50,13 +46,13 @@ class TestViewController: UIViewController {
             let wordFromButton = sender.title(for: .normal)
             
             if wordFromButton == checkingWord {
-                sender.backgroundColor =  UIColor.Colors.green
+                sender.backgroundColor = Color.green
                 correctWords += 1
             } else {
-                sender.backgroundColor = UIColor.Colors.red
+                sender.backgroundColor = Color.red
                 for button in answerButtons {
                     if button.title(for: .normal) == checkingWord {
-                        button.backgroundColor = UIColor.Colors.green
+                        button.backgroundColor = Color.green
                         wrongAnswers[textOfTest.text ?? ""] = checkingWord
                         print(wrongAnswers)
                     }
@@ -67,7 +63,7 @@ class TestViewController: UIViewController {
                 self.nextQuestion()
                 self.answered = false
                 for button in self.answerButtons {
-                    button.backgroundColor = UIColor.Colors.blue
+                    button.backgroundColor = Color.blue
                 }
             }
         }
@@ -77,7 +73,7 @@ class TestViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.wordsCount = countOfQuestions
-        resultVC.knowWords = correctWords
+        resultVC.correctWords = correctWords
         resultVC.wrongAnswers = wrongAnswers
     }
 
@@ -141,18 +137,4 @@ extension TestViewController {
         wrongAnswers = [:]
     }
     
-}
-
-extension UIColor {
-    struct Colors {
-        static var green: UIColor {
-            UIColor(red: 184/255, green: 207/255, blue: 158/255, alpha: 1)
-        }
-        static var red: UIColor {
-            UIColor(red: 237/255, green: 124/255, blue: 104/255, alpha: 1)
-        }
-        static var blue: UIColor {
-            UIColor(red: 118/255, green: 178/255, blue: 248/255, alpha: 1)
-        }
-    }
 }

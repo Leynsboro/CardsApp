@@ -24,8 +24,6 @@ class DetailsBookViewController: UIViewController {
             .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
             .foregroundColor: Color.blue
         ]
-        
-        bookImage.layer.cornerRadius = Radius.radiusLargeImage
 
         bookImage.image = book.image
         nameBookLable.text = book.name
