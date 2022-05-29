@@ -36,12 +36,13 @@ class CardViewController: UIViewController {
     
     @IBAction func save() {
         card.updateValue(cards.originalWord, forKey: cards.translatedWord)
+        cards = delegate?.getNextCard(cards)
         
         englishWordLabel.text = cards.originalImage
         russianWordLabel.text = cards.translatedWord
         
         imageView.image = UIImage(named: cards.originalImage)
-        cards = delegate?.getNextCard(cards)
+        
         russianWordLabel.isHidden = true
         
         print(cards)
@@ -49,13 +50,12 @@ class CardViewController: UIViewController {
     }
     
     @IBAction func noSave() {
-        card.updateValue(cards.originalWord, forKey: cards.translatedWord)
-        
         englishWordLabel.text = cards.originalImage
         russianWordLabel.text = cards.translatedWord
+        cards = delegate?.getNextCard(cards)
         
         imageView.image = UIImage(named: cards.originalImage)
-        cards = delegate?.getNextCard(cards)
+        
         russianWordLabel.isHidden = true
     }
     
