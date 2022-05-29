@@ -38,9 +38,12 @@ class CardsTableViewController: UITableViewController {
         content.textProperties.color = Color.lightGray
         
         cell.contentConfiguration = content
+        
+        cell.selectionStyle = .none
+        
         return cell
     }
-   
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navVC = segue.destination as? UINavigationController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
