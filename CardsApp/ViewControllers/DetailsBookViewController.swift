@@ -21,7 +21,9 @@ class DetailsBookViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [
-            .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
+            .font: UIFont(
+                name: Font.fontName,
+                size: Font.sizeForLargeTitle) ?? UIFont(),
             .foregroundColor: Color.blue
         ]
 

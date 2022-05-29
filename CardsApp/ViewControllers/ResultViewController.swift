@@ -52,8 +52,9 @@ extension ResultViewController: UITableViewDelegate,  UITableViewDataSource {
         let word = wrongAnswers[index]
 
         content.text = "\(word.key) - \(word.value)"
-        content.textProperties.font = UIFont(name: Font.fontName,
-                                             size: Font.sizeForTextInTableView) ?? UIFont()
+        content.textProperties.font = UIFont(
+            name: Font.fontName,
+            size: Font.sizeForTextInTableView) ?? UIFont()
         content.textProperties.color = Color.lightGray
 
         cell.contentConfiguration = content

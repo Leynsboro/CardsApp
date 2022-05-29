@@ -33,7 +33,9 @@ class CardsTableViewController: UITableViewController {
         let card = cardsList[indexPath.row]
 
         content.text = card.originalWord
-        content.textProperties.font = UIFont(name: Font.fontName, size: Font.sizeForTextInTableView) ?? UIFont()
+        content.textProperties.font = UIFont(
+            name: Font.fontName,
+            size: Font.sizeForTextInTableView) ?? UIFont()
         content.textProperties.color = Color.lightGray
         
         cell.contentConfiguration = content

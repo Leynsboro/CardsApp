@@ -17,7 +17,11 @@ class NewBookTableViewController: UITableViewController {
     
     @IBOutlet var saveButton: UIBarButtonItem!
     
-    var book = Book(name: "", author: "", description: "", image: UIImage(named: ""), isFavorite: false)
+    var book = Book(name: "",
+                    author: "",
+                    description: "",
+                    image: UIImage(named: ""),
+                    isFavorite: false)
     var imageChange = false
     
     override func viewDidLoad() {
@@ -25,7 +29,9 @@ class NewBookTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = Color.darkBlue
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [
-            .font: UIFont(name: Font.fontName, size: Font.sizeForLargeTitle) ?? UIFont(),
+            .font: UIFont(
+                name: Font.fontName,
+                size: Font.sizeForLargeTitle) ?? UIFont(),
             .foregroundColor: Color.blue
         ]
         
@@ -53,7 +59,11 @@ class NewBookTableViewController: UITableViewController {
         let description = newDescriptionTextField.text ?? ""
         let image = imageChange ? newBookImage.image : UIImage(named: "book")
         
-        book = Book(name: name, author: author, description: description, image: image, isFavorite: book.isFavorite)
+        book = Book(name: name,
+                    author: author,
+                    description: description,
+                    image: image,
+                    isFavorite: book.isFavorite)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -80,7 +90,9 @@ extension NewBookTableViewController {
         let camera = UIImage(systemName: "camera")
         let photo = UIImage(systemName: "photo")
         
-        let alertSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let alertSheet = UIAlertController(title: nil,
+                                           message: nil,
+                                           preferredStyle: .actionSheet)
         
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
             self.choseImagePicker(source: .camera)
@@ -92,7 +104,9 @@ extension NewBookTableViewController {
         }
         photoAction.setValue(photo, forKey: "image")
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel,
+                                         handler: nil)
         
         alertSheet.addAction(cameraAction)
         alertSheet.addAction(photoAction)

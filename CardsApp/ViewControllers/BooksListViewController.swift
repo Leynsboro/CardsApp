@@ -66,11 +66,15 @@ extension BooksListViewController {
         let book = booksList[indexPath.row]
         
         content.text = book.name
-        content.textProperties.font = UIFont(name: Font.fontName, size: Font.sizeForTextInTableView) ?? UIFont()
+        content.textProperties.font = UIFont(
+            name: Font.fontName,
+            size: Font.sizeForTextInTableView) ?? UIFont()
         content.textProperties.color = Color.lightGray
         
         content.secondaryText = book.author
-        content.secondaryTextProperties.font = UIFont(name: Font.fontName, size: Font.sizeForSecondaryTextInTableView) ?? UIFont()
+        content.secondaryTextProperties.font = UIFont(
+            name: Font.fontName,
+            size: Font.sizeForSecondaryTextInTableView) ?? UIFont()
         content.secondaryTextProperties.color = Color.gray
         
         content.image = book.image
@@ -120,8 +124,10 @@ extension BooksListViewController {
             completion(true)
         }
         
-        action.backgroundColor = book.isFavorite ? UIColor(red: 184/255, green: 207/255, blue: 158/255, alpha: 1) : .systemGray
-        action.image = book.isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        action.backgroundColor = book.isFavorite ? Color.green : .systemGray
+        action.image = book.isFavorite ?
+            UIImage(systemName: "heart.fill") :
+            UIImage(systemName: "heart")
         
         return action
     }
