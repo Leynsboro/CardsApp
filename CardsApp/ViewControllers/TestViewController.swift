@@ -94,8 +94,8 @@ extension TestViewController {
         progressView.setProgress(progressive, animated: true)
         
         textOfTest.text = word.key
-        stackViewButtons.isHidden.toggle()
-        progressView.isHidden.toggle()
+        stackViewButtons.isHidden = false
+        progressView.isHidden = false
         
         setTextForButtons(word.value)
         
