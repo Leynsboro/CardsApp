@@ -9,7 +9,7 @@ import UIKit
 
 class TestViewController: UIViewController {
     
-    @IBOutlet var textView: UIView!
+    //@IBOutlet var textView: UIView!
     @IBOutlet var textOfTest: UILabel!
     @IBOutlet var progressView: UIProgressView!
     
@@ -38,7 +38,7 @@ class TestViewController: UIViewController {
         for button in answerButtons {
             button.layer.cornerRadius = 10
         }
-        textView.layer.cornerRadius = 10
+        //textView.layer.cornerRadius = 10
         
         workingDict = words
         updateUI()

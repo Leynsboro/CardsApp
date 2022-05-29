@@ -17,7 +17,7 @@ class CardViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var englishWordLabel: UILabel!
-    @IBOutlet var russianwordLabel: UILabel!
+    @IBOutlet var russianWordLabel: UILabel!
     
     var cards: Card!
     
@@ -25,41 +25,43 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        russianwordLabel.isHidden = true
+        russianWordLabel.isHidden = true
         setupUI(with: cards)
-        }
+    }
     
-
-   
     @IBAction func translation() {
-        russianwordLabel.isHidden = false
-        russianwordLabel.text = cards.translatedWord
+        russianWordLabel.isHidden = false
+        russianWordLabel.text = cards.translatedWord
     }
     
     @IBAction func save() {
         card.updateValue(cards.originalWord, forKey: cards.translatedWord)
         
         englishWordLabel.text = cards.originalImage
-        russianwordLabel.text = cards.translatedWord
+        russianWordLabel.text = cards.translatedWord
+        
         imageView.image = UIImage(named: cards.originalImage)
         cards = delegate?.getNextCard(cards)
-        russianwordLabel.isHidden = true
+        russianWordLabel.isHidden = true
+        
+        print(cards)
         
     }
     
     @IBAction func noSave() {
-        
         card.updateValue(cards.originalWord, forKey: cards.translatedWord)
+        
         englishWordLabel.text = cards.originalImage
-        russianwordLabel.text = cards.translatedWord
+        russianWordLabel.text = cards.translatedWord
+        
         imageView.image = UIImage(named: cards.originalImage)
         cards = delegate?.getNextCard(cards)
-        
+        russianWordLabel.isHidden = true
     }
     
     private func setupUI(with card: Card) {
         englishWordLabel.text = cards.originalWord
-        russianwordLabel.text = cards.translatedWord
+        russianWordLabel.text = cards.translatedWord
         imageView.image = UIImage(named: cards.originalImage)
     }
     

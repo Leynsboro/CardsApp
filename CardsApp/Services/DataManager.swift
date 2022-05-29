@@ -5,7 +5,7 @@
 //  Created by Илья Гусаров on 20.05.2022.
 //
 
-import UIKit
+import Foundation
 
 class DataManager {
     
@@ -13,7 +13,7 @@ class DataManager {
     
     let words = ["cat": "кошка", "dog": "собака", "eye": "глаз", "leg": "нога", "tea": "чай", "cake": "торт", "laptop": "ноутбук", "apple": "яблоко", "snake": "змея", "milk": "молоко"]
     
-    let books: [String: Dictionary] = [
+    let books: [String: [String: String]] = [
         "Anne of Green Gables": [
             "author": "Lucy Maud Montgomery",
             "description": "Роман канадской писательницы об Энн «с двумя н»: рыжеволосой девочке, удочеренной одинокими братом и сестрой, живущими на ферме. Трогательная, захватывающая, полная смешных и волнительных моментов, книга о любви, чести, взрослении, дружбе."
@@ -44,5 +44,5 @@ class DataManager {
         ]
     ]
     
-    init() {}
+    private init() {}
 }
