@@ -15,6 +15,9 @@ class CardsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = Color.darkBlue
+        tabBarController?.tabBar.barTintColor = Color.darkBlue
+        
         tableView.rowHeight = 80
     }
 
