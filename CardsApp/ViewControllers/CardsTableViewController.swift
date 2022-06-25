@@ -8,7 +8,7 @@
 import UIKit
 
 class CardsTableViewController: UITableViewController {
-
+    
     var cardsList: [Card] = []
     
     override func viewDidLoad() {
@@ -19,19 +19,19 @@ class CardsTableViewController: UITableViewController {
         
         tableView.rowHeight = 80
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return cardsList.count
+        return cardsList.count
     }
-
-   
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         let card = cardsList[indexPath.row]
-
+        
         content.text = card.originalWord
         content.textProperties.font = UIFont(
             name: Font.fontName,
@@ -44,7 +44,7 @@ class CardsTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navVC = segue.destination as? UINavigationController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }

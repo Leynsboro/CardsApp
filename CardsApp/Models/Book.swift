@@ -26,7 +26,7 @@ struct Book {
                                     description: value["description"] ?? "",
                                     image: UIImage(named: key),
                                     isFavorite: false
-                                    ))
+                                   ))
         }
         
         return listOfBooks

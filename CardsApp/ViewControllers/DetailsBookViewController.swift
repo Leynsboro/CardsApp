@@ -15,7 +15,7 @@ class DetailsBookViewController: UIViewController {
     @IBOutlet var descriptionBookLable: UILabel!
     
     var book: Book!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,7 @@ class DetailsBookViewController: UIViewController {
                 size: Font.sizeForLargeTitle) ?? UIFont(),
             .foregroundColor: Color.blue
         ]
-
+        
         bookImage.image = book.image
         nameBookLable.text = book.name
         descriptionBookLable.text = book.description

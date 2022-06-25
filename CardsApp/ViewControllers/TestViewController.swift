@@ -24,7 +24,7 @@ class TestViewController: UIViewController {
     var correctWords = 0
     var progress = 0
     var checkingWord = ""
-   
+    
     var answered = false
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,9 +69,9 @@ class TestViewController: UIViewController {
         resultVC.correctWords = correctWords
         resultVC.wrongAnswers = wrongAnswers
     }
-
+    
     @IBAction func unwind( _ seg: UIStoryboardSegue) {}
-
+    
 }
 
 extension TestViewController {

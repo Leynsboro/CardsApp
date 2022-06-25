@@ -10,7 +10,7 @@ import UIKit
 class BooksListViewController: UITableViewController {
     
     var booksList: [Book] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
@@ -39,7 +39,7 @@ class BooksListViewController: UITableViewController {
         }
     }
     
-// MARK: - Navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let book = booksList[indexPath.row]
@@ -54,11 +54,11 @@ class BooksListViewController: UITableViewController {
 
 // MARK: - Table view DataSource and Delegate
 extension BooksListViewController {
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         booksList.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "booksCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -126,8 +126,8 @@ extension BooksListViewController {
         
         action.backgroundColor = book.isFavorite ? Color.green : .systemGray
         action.image = book.isFavorite ?
-            UIImage(systemName: "heart.fill") :
-            UIImage(systemName: "heart")
+        UIImage(systemName: "heart.fill") :
+        UIImage(systemName: "heart")
         
         return action
     }

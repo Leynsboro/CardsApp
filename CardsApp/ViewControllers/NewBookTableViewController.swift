@@ -50,7 +50,7 @@ class NewBookTableViewController: UITableViewController {
         setSaveButtonState()
     }
     
-// MARK: - Navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "save" else { return }
         
